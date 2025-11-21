@@ -1,13 +1,9 @@
 <?php
-$suffix = "Ed";
-function addSuffix(string $str) {
-    if (str_ends_with("ED")) {
+function addSuffix(string $str, string $suffix ="ing") {
+    
+    if (str_ends_with($str, $suffix)) {
         return $str;
     }else{
-        $suffix = "ED";
-        return "$str, $suffix";
+        return "$str$suffix";
     }
-    echo $str, $suffix;
 };
-
-addSuffix ("Hello")
